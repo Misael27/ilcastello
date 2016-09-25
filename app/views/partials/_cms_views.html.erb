@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class="inner-cms">
+
+  <h1 class="cms-h1">Listing Views</h1>
+  <div class="row">
+
+
+        <div class="col-md-1">Title</div>
+        <div class="col-md-7">Content</div>
+        <div class="col-md-1">UrlImage</div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <br>
+
+    <% @templates.each do |template| %>
+
+        <div class="row">
+              <div class="col-md-1"><%= template.title %></div>
+              <div class="col-md-7">  <%= template.content %></div>
+              <div class="col-md-1"><%= template.urlImage %></div>
+              <div class="col-md-3">
+                  <div class="row">
+                    <div class="col-md-4"><%= link_to 'Show', template %></div>
+                    <div class="col-md-4"><%= link_to 'Edit', edit_template_path(template) %></div>
+                    <div class="col-md-4"><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                  </div>
+              </div>
+        </div>
+        <hr>
+    <% end %>
+
+
+    <br>
+          <div class="">
+              <%= link_to 'New Template', new_template_path, class: "newshowcar-button" %>
+          </div>
+      </div>
+
+    <br>

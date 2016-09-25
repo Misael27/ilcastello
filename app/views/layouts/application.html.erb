@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>IlCastello</title>
+
+
+
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+   	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+
+</head>
+
+<body style="padding:0px; margin:0px; background-color:black;font-family:Arial, sans-serif">
+
+	<span class="ir-arriba glyphicon glyphicon-arrow-up" style="display: block;"></span>
+		<div class ="contenido">
+			<nav class="navbar navbar-inverse" id="gen-nav">
+			  <div id ="nav-link" class="container-fluid">
+				<div class="navbar-header .nav-link">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+
+				  <a class="navbar-brand" href="/" style="border-bottom: solid #222222;"><img WIDTH=40 HEIGHT=41 src="http://cdn.lamborghini.com/templates/main/Resources/Public/src/img/logo.png" style="margin-top: -10px;"></a>
+
+				</div>
+
+						<div class="collapse navbar-collapse" id="myNavbar">
+						  <ul class="nav navbar-nav .nav-link" style="font-size: 127%;">
+
+							<li class="active"><a href="/" style="border-bottom:solid 3px #F3C848"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+							<li><a href="showcars" style="border-bottom: solid #222222;"><span class="glyphicon glyphicon-book"></span>&nbsp;Cars</a></li>
+							<li><a href="servicios" style="border-bottom: solid #222222;"><span class="glyphicon glyphicon-wrench"></span>&nbsp;Services</a></li>
+							<li><a href="conocenos" style="border-bottom: solid #222222;"><span class="glyphicon glyphicon-hand-up"></span>&nbsp;About us</a></li>
+							<li><a href="contactanos" style="border-bottom: solid #222222;"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;Contact</a></li>
+							<%if @views.size > 0%>
+									<% @views.each do |view|%>
+										<li><%=link_to view.title, controller: "templates", action: "show", id: view.id, class: "bar-item"%></li>
+									<%end%>
+							<%end%>
+							<% if user_signed_in?%>
+								<li><a href="CMS" style="border-bottom: solid #222222;"><span class="glyphicon glyphicon-pencil"></span>&nbsp;CMS</a></li>
+							<%end%>
+						  </ul>
+
+						  <%= render "partials/session"%>
+						</div>
+
+
+			  </div>
+			</nav>
+			<hr id ="divisor">
+
+			<!--<p class="notice"><%= notice %></p>
+		  <p class="alert"><%= alert %></p>-->
+
+		<%= yield %>
+
+	</div>
+
+	<div id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+			</ul>
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Il Castello. All rights reserved</li><li>Design: <a href="http://thevirtualcastle.com/">Virtual Castle</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			//$("#gen-nav").css("width", "100%")
+			//$("#gen-nav").css("position","fixed")
+
+			$('.ir-arriba').click(function(){
+				$('body, html').animate({
+					scrollTop: '0px'
+				},300 );
+			});
+
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 0){
+					$('.ir-arriba').slideDown(300);
+				} else {
+					$('.ir-arriba').slideUp(300);
+				};
+			});
+		});
+	</script>
+
+
+
+</body>
+</html>

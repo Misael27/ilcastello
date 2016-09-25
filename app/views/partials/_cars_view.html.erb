@@ -1,0 +1,18 @@
+
+  <section class="wrapper style1">
+          <div class="container">
+              <div class="row">
+                   <% @showcars.each do |showc| %>
+                        <section class="6u 12u(narrower)" style="border: solid 3px;border-style: groove;border-radius: 15px; margin-left: 2%;">
+                            <div class="box post">
+                              <%= link_to image_tag("showcar/" << showc.photo_link), root_path, :class  => "image left" %>
+                                <div class="inner" style="margin-left: 52%;">
+                                    <h3><%= showc.name %></h3>
+                                    <p><%= showc.description%></p>
+                                 </div>
+                            </div>
+                          </section>
+
+                      <%end%>
+                  </div>
+              </div>

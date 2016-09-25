@@ -1,0 +1,36 @@
+<%= form_for(@showcar) do |f| %>
+  <% if @showcar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@showcar.errors.count, "error") %> prohibited this showcar from being saved:</h2>
+
+      <ul>
+      <% @showcar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="imageView">
+    <%if @showcar.photo_link != nil %>
+      <%= link_to image_tag("showcar/" << @showcar.photo_link), root_path, :class  => "image left" %>
+    <%end%>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name , class: "form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description , class: "form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label :photo_link %><br>
+    <%= f.text_field :photo_link , class: "form-control"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

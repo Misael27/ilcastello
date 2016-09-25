@@ -1,0 +1,65 @@
+			<div id="page-wrapper" style="background-color: #F3C847">
+				<section class="wrapper style1" style ="background: linear-gradient(#F3C746 ,#FFF, #E2E2E2);">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+
+								<article>
+
+									<span class="image featured"><%= image_tag ("conocenos/fondo_conocenos.jpg"), :style => "max-height: 529px;"%></span>
+
+									<header style = "margin-bottom:3%; text-align:justify">
+										<h2>¿Quienes somos?</h2>
+										<span>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu. Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</span>
+									</header>
+
+									
+									<header style = "margin-bottom:3%; text-align:justify">
+										<h2>Misi&oacute;n:</h2>
+										<span>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu. Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</span>
+									</header>
+
+		
+									<header style = "margin-bottom:3%; text-align:justify">
+										<h2>Visi&oacute;n:</h2>
+										<span>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu. Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</span>
+									</header>
+									<section class="6u 12u(narrower)" style="border: solid 3px #F4C84A;border-style: groove;border-radius: 15px; margin-left: 2%; float:right; width:40%; margin-bottom:5%;">
+										<div class="box post"> <%= link_to image_tag("conocenos/1.jpg",:style => "max-height: 372px;margin-top: -3px;"), root_path, :class  => "image left", :style => "width:100%;" %>
+										</div>
+										<div class="inner" style="text-align:center">
+												<h3>Propietario</h3>
+										</div>
+
+									</section>
+
+	
+									<section class="6u 12u(narrower)" style="border: solid 3px #F4C84A;border-style: groove;border-radius: 15px; margin-left: 2%; float:left; width:40% ">
+										<div class="box post"> <%= link_to image_tag("conocenos/2.jpg",:style => "max-height: 372px;margin-top: -3px;"), root_path, :class  => "image left", :style => "width:100%" %>
+										</div>
+										<div class="inner" style="text-align:center">
+												<h3>Propietario</h3>
+										</div>
+
+									</section>
+									
+									
+								</article>
+
+						</div>
+					</div>
+				</section>
+			</div>
+<script>
+	$(document).ready(function(){
+	     //$(".active").css("")
+	     $(".active>a").css("border-bottom","solid 4px #222222");
+	     $(".active").removeClass("active");
+	     var li = $($(".navbar-nav")[0]).find("li")[3];
+	     $(li).addClass("active");
+	      $(".active>a").css("border-bottom","solid 3px #F3C848");
+
+    });
+
+  </script>

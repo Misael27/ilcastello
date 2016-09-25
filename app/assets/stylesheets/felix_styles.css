@@ -1,0 +1,108 @@
+.form-control
+{
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  width: 100%;
+  display: block;
+  padding: 10px 0px;
+  font-size: 4em;
+}
+
+.inner-cms
+{
+  color: grey;
+  padding-left: 10%;
+  padding-right: 0%;
+  font-size: 18px;
+}
+
+.show-button
+{
+    background-color: #2ecc71; /* Green */
+    border: none;
+    color: grey;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.edit-button
+{
+    background-color: #f1c40f; /* Green */
+    border: none;
+    color: grey;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.destroy-button
+{
+    background-color: #e74c3c; /* Green */
+    border: none;
+    color: grey;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.newshowcar-button
+{
+    background-color: #3498db; /* Green */
+    border: none;
+    color: grey;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.cms-h1
+{
+  font-size: 30px;
+}
+
+.show-each p
+{
+  line-height: 1.5;
+  font-size: 28px;
+}
+
+.newshowcar-button
+{
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  width: 100%;
+  display: block;
+  padding: 10px 0px;  padding:
+}
+.bar-item
+{
+  border-bottom: solid #222222;
+}
+
+.view-content
+{
+  color: grey;
+}
+.show-view
+{
+  font-size: 65px;
+}
+.show-view h1
+{
+  border-bottom: 0px;
+}
+
+.show-view p
+{
+  font-size: 30px;
+}

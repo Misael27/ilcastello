@@ -1,0 +1,89 @@
+<section class="wrapper style1" style="background-color: rgba(252,248,227,1);">
+	<div class="container">
+		<div class="row">
+					<style>
+						h3{
+							font-size : 2.2em;
+						}
+					</style>
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+						<h3>Nuestros cont&aacute;ctos:</h3>
+						<p><strong>Correo:</strong> usuario@example.com<br><br>
+							<strong>Celular:</strong> (0416) 111-9615<br><br>
+							<strong>Direcci&oacute;n:</strong>Av. Francisco Solano con calle El Bosque Edificio A Piso 12 Urbanización Chacao Caracas - Venezuela<br>
+							RIF: J-2986747413-3<br>
+						</p>
+						
+						<%=image_tag "contacto/contacto.jpg",:style => "max-height: 372px;margin-top: -3px; max-width:100%;border-radius: 67px;"%>
+					</div>
+					<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align:center; margin-top:5px">
+						<style>
+
+							input[type="text"]:focus{ 
+							    outline: none !important;
+							    border-color: #F3C848;
+							    box-shadow: 0 0 10px #F3C848;
+							}
+
+							input[type="email"]:focus{ 
+							    outline: none !important;
+							    border-color: #F3C848;
+							    box-shadow: 0 0 10px #F3C848;
+							}
+
+							textarea[name="message"]:focus{ 
+							    outline: none !important;
+							    border-color: #F3C848;
+							    box-shadow: 0 0 10px #F3C848;
+							}
+
+						</style>
+						<h3>Escrib&eacute;nos</h3>
+						<form>
+							<div class="row 50%">
+									<div class="6u 12u(mobilep)">
+										<input type="text" name="name" id="name" placeholder="Name" class ="inputs"/>
+									</div>
+									<div class="6u 12u(mobilep)" style = "width:54%">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+							</div>
+					
+								<div class="row 50%">
+									<div class="12u">
+										<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<ul class="actions">
+										<li><input type="submit" class="button alt" value="Send Message"/></li>
+										</ul>
+									</div>
+								</div>
+							
+						</form>
+
+					</div>
+				
+			</div>
+			
+
+
+			
+	</div>
+</section>
+
+<script>
+	$(document).ready(function(){
+	     //$(".active").css("")
+	     $(".active>a").css("border-bottom","solid 4px #222222");
+	     $(".active").removeClass("active");
+	     var li = $($(".navbar-nav")[0]).find("li")[4];
+	     $(li).addClass("active");
+	      $(".active>a").css("border-bottom","solid 3px #F3C848");
+
+    });
+
+  </script>

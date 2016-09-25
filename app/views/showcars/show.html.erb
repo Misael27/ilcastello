@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="imageView">
+  <%if @showcar.photo_link != nil %>
+    <%= link_to image_tag("showcar/" << @showcar.photo_link), root_path, :class  => "image left", :width => 400, :height => 300%>
+  <%end%>
+</div>
+
+<div class="show-each">
+
+  <p>
+    <strong>Name:</strong>
+    <%= @showcar.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @showcar.description %>
+  </p>
+
+  <p>
+    <strong>Photo link:</strong>
+    <%= @showcar.photo_link %>
+  </p>
+
+  <%= link_to 'Edit', edit_showcar_path(@showcar) %> |
+  <%= link_to 'Back', :controller => 'templates', :action => 'CMS' %>
+
+</div>

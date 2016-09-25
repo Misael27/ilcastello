@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  reason: MyString
+  id_Car: MyString
+  id_User: MyString
+  status: MyString
+
+two:
+  model: MyString
+  reason: MyString
+  id_Car: MyString
+  id_User: MyString
+  status: MyString
